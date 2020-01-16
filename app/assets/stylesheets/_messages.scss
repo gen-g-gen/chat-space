@@ -82,7 +82,7 @@
 .chat-main{
   background-color: #ffffff;
   height:100vh;
-  width:calc(100% - 300px);
+  width:calc(100vw - 300px);
 
   &__group-info{
     background-color: #ffffff;
@@ -153,20 +153,14 @@
     background-color: #d2d2d2;
     height: 90px;
     width:calc(100vw - 300px);
-
     
-    &__box{
-      display:inline;
-      padding-left:40px;
-      padding-right:40px;
-
-      background-color: red;
-
-    
-
+    padding-left:40px;
+    padding-right:40px;
+    #flex{
+      display:flex;
       &__text{
         position:relative;
-        width: calc(100% - 100px);
+        width: calc(100vw - 500px);
 
         &__message{
           padding-left:10px;
@@ -203,4 +197,7 @@
       }
     }
   }
+}
+#flex {
+  display: flex;
 }
