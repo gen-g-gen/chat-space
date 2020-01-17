@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+.center{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+
 .wrapper{
   display:flex;
 }
@@ -8,56 +15,53 @@
   background-color: #253141;
   height:100vh;
   width:300px;
+
   &__user-name{
     background-color: #253141;
     height: 100px;
     width:300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend.center;
 
     &__top-item{
-
       height:20px;
       width:260px;
       display: flex;
       justify-content: space-between;
-      
       color:white;
+
       &__name{
         width:200px;
         height:20px;
         line-height: 20px;
         align-items: center;
       }
+
       &__icons{
         height:20px;
         width:60px;
         display: flex;
         justify-content:flex-end;
         line-height: 20px;
+
         &__edit{
           color:#ffffff;
           text-align: center;
           line-height: 20px;
           margin-right:5px;
         }
+
         &__cog{
           color:#ffffff;
           text-align: center;
           line-height: 20px;
         }
       }
-
-
     }
   }
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     width:300px;
-    // display: flex;
-    // justify-content:center;
     
     &__group{
       height:91px;
@@ -68,15 +72,12 @@
       &__name{
         font-size: 15px;
         margin-bottom: 5px;
-        // margin-top:20px;
       }
       &__message{
         font-size: 11px;
         margin-top:0px;
-        // margin-bottom:40px;
       }
     }
-
   }
 }
 .chat-main{
@@ -89,16 +90,20 @@
     height:100px;
     width:calc(100vw - 300px);
     border-bottom:solid 1px #eeeeee;
+
     &__title{
       display:flex;
       justify-content: space-between;
       margin:0px 40px;
+
       &__box{
+
         &__name{
           margin:35px 0 15px 0;
           color:#333333;
           font-size:20px;
         }
+
         &__menber{
           color:#999999;
           font-size:12px;
@@ -113,8 +118,6 @@
         color:#38aef0;
         font-size:16px;
         border:solid 1px;
-
-
       }
     }
   }
@@ -125,18 +128,15 @@
     width:calc(100vw - 300px);
     padding-left:40px;
     &__contents{
-      // height:123px;
       padding-top:35px;
       margin-bottom:46px;
       &__box{
         margin-bottom: 12px;
         display:flex;
-        // height:16px;
         &__name{
           color:#333333;
           font-size:16px;
           font-weight: bold;
-          // line-height:16px;
         }
         &__time{
           font-size:12px;
@@ -154,6 +154,7 @@
     height: 90px;
     width:calc(100vw - 300px);
     align-items:center;
+
     &__box{
       padding-left:40px;
       padding-right:40px;
@@ -161,6 +162,7 @@
       align-items:center;
       height: 90px;
       width:calc(100vw - 300px);
+
       &__text{
         position:relative;
         width: calc(100vw - 500px);
@@ -174,6 +176,7 @@
           background-color: #ffffff;
           color: #434a54;
           border-style: none;
+
           #_text{
             width:100%;
           }
@@ -183,23 +186,23 @@
           right:11px;
           top:13px;
           width: 20px;
+
           #gone{
             display:none;
           }
         }
       }
       &__send-btn{
-        
         #s-btn{
           background-color: #38aef0;
           width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        line-height: 50px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          line-height: 50px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
         }
       }
     }
