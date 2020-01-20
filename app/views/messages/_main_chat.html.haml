@@ -3,30 +3,26 @@
     .chat-main__group-info__title
       .chat-main__group-info__title__box
         .chat-main__group-info__title__box__name
-          title
+          = @group.name
         .chat-main__group-info__title__box__menber
-          member
+          Member:
+          - @group.users. each do |user|
+            =user.name
       .chat-main__group-info__title__edit
-        Edit
+        = link_to edit_group_path(@group[:id]), class: "chat-main__group-info__title__edit__btn" do
+          Edit
   .chat-main__message-list
-    .chat-main__message-list__contents
-      .chat-main__message-list__contents__box
-        .chat-main__message-list__contents__box__name
-          masa
-        .chat-main__message-list__contents__box__time
-          today
-      .chat-main__message-list__contents__message
-        goooood morning!
+    .messages
+      = render @messages
   .chat-main__message-form
-    = form_for "#", id: "flex" do |form|
+    = form_for [@group, @message],id: "flex" do |form|
       .chat-main__message-form__box
         .chat-main__message-form__box__text
           .chat-main__message-form__box__text__message
-            = form.text_field :text, placeholder: "type a message.."
+            = form.text_field :content, id: "text", placeholder: "type a message.."
           .chat-main__message-form__box__text__btn
-            %label
+            = form.label :image do
               = icon 'far', 'image'
-              #gone
-                = form.file_field :image
+              = form.file_field :image, class: "gone"
         .chat-main__message-form__box__send-btn
-          = form.submit "Send", id: "s-btn"
+          = form.submit "Send",id: "s-btn"
