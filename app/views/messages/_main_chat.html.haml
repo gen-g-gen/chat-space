@@ -3,11 +3,14 @@
     .chat-main__group-info__title
       .chat-main__group-info__title__box
         .chat-main__group-info__title__box__name
-          title
+          = @group.name
         .chat-main__group-info__title__box__menber
-          member
+          Member:
+          - @group.users. each do |user|
+            =user.name
       .chat-main__group-info__title__edit
-        Edit
+        = link_to edit_group_path(@group[:id]), class: "chat-main__group-info__title__edit__btn" do
+          Edit
   .chat-main__message-list
     .messages
       = render @messages

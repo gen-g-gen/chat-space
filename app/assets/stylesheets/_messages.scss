@@ -113,13 +113,21 @@
       }
       &__edit{
         margin-top:28px;
-        padding: 0px 20px;
+        // padding: 0px 20px;
         height: 40px;
         line-height: 40px;
         width:72px;
         color:#38aef0;
         font-size:16px;
         border:solid 1px;
+        
+        &__btn{
+        padding: 0px 20px;
+        color:#38aef0;
+        cursor: pointer;
+        text-decoration: none;
+        
+        }
       }
     }
   }
