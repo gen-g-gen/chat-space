@@ -15,12 +15,14 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
-
-    def edit
-      @group = Group.find(params[:id])
-    end
-
   end
+
+
+  def edit
+    @group = Group.find(params[:id])
+  end
+
+  
 
   private
 
