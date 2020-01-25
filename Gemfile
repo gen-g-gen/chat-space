@@ -43,7 +43,11 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'faker', "~> 2.8"
   gem 'capybara'
-  
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 
@@ -70,3 +74,4 @@ gem 'devise'
 gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
